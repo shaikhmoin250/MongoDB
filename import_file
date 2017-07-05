@@ -1,0 +1,591 @@
+C:\Program Files\MongoDB\Server\3.4\bin> mongoimport --jsonArray --db mycustomers --collection customers --file C:\bank_data.json
+2017-07-05T18:04:10.914+0530    connected to: localhost
+2017-07-05T18:04:13.909+0530    [###########.............] mycustomers.customers        10.9MB/22.4MB (48.5%)
+2017-07-05T18:04:16.909+0530    [#####################...] mycustomers.customers        20.3MB/22.4MB (90.4%)
+2017-07-05T18:04:17.696+0530    [########################] mycustomers.customers        22.4MB/22.4MB (100.0%)
+2017-07-05T18:04:17.696+0530    imported 50000 documents
+
+
+
+
+
+
+
+To check whether it is import or not
+
+ db.customers.find().pretty();
+{
+        "_id" : ObjectId("595c8714e11b5d72288ff582"),
+        "first_name" : "John",
+        "last_name" : "Doe",
+        "gender" : "Male",
+        "age" : 45
+}
+{
+        "_id" : ObjectId("595c89fde11b5d72288ff584"),
+        "first_name" : "Jacky",
+        "last_name" : "Johnson",
+        "gender" : "Male",
+        "age" : 50
+}
+{
+        "_id" : ObjectId("595c966ee11b5d72288ff585"),
+        "first_name" : "Mohan",
+        "last_name" : "Gadekar",
+        "membership" : [
+                "mem1",
+                "mem2"
+        ],
+        "address" : {
+                "street" : "2nd Stree main",
+                "city" : "Mumbai"
+        },
+        "contact" : {
+                "name" : "Sneha",
+                "relationship" : "friend"
+        },
+        "gender" : "female"
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2d7"),
+        "first_name" : "JAMES",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 8995952.153640702,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 3901436.5580737568,
+                        "currency" : "USD"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2d8"),
+        "first_name" : "JOHN",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 9059210.226195503,
+                        "currency" : "YUAN"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 5926514.06875377,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 8172876.597329946,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 4320374.732933239,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 9159979.449077135,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 8923437.883474918,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 3810781.9932702538,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 1803757.09787294,
+                        "currency" : "YEN"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 4947925.350834157,
+                        "currency" : "EURO"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2d9"),
+        "first_name" : "ROBERT",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 3465277.443564153,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 6001520.415853325,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 1739276.2966888128,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 7704684.832334223,
+                        "currency" : "YUAN"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2da"),
+        "first_name" : "MICHAEL",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 2819063.8844904397,
+                        "currency" : "YEN"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 4131942.2529414617,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 3782509.0311059216,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 6531886.9064971,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 2105927.920320713,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 4612959.380901612,
+                        "currency" : "YUAN"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2db"),
+        "first_name" : "WILLIAM",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 2497138.738978415,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 405606.12124239095,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 9149015.783455048,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 8797914.360492531,
+                        "currency" : "YUAN"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2dc"),
+        "first_name" : "DAVID",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 8857597.106995674,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 471237.47356353,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 2834734.162895667,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 6177092.375456998,
+                        "currency" : "USD"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2dd"),
+        "first_name" : "RICHARD",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 714872.2542833243,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 4812651.936193353,
+                        "currency" : "YUAN"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 2862753.076585194,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 7518653.660258865,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 2349544.575176711,
+                        "currency" : "YEN"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 8443090.325156216,
+                        "currency" : "YEN"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 745273.1369779429,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 8711574.840919748,
+                        "currency" : "POUNDS STERLING"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2de"),
+        "first_name" : "CHARLES",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 7959552.738209671,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 7586797.95113736,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 3000642.5318386676,
+                        "currency" : "YUAN"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 8510528.056592602,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 9792223.997477302,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 2541888.2929410744,
+                        "currency" : "POUNDS STERLING"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2df"),
+        "first_name" : "JOSEPH",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 4622864.137518865,
+                        "currency" : "YEN"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 6580439.762613354,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 9045715.151562946,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 8273872.604220738,
+                        "currency" : "YUAN"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 8996205.352283742,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 2691894.235052195,
+                        "currency" : "YUAN"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2e0"),
+        "first_name" : "THOMAS",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 936130.4617335526,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 4173144.9420674974,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 8282074.554095908,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 7890796.5475060865,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 4747966.686441477,
+                        "currency" : "PESO"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2e1"),
+        "first_name" : "CHRISTOPHER",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 1870338.5807330757,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 5098043.412530517,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 3042158.5783834355,
+                        "currency" : "YEN"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 2721431.0181220435,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 2135388.570106006,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 2416831.8654360515,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 405349.36727577704,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 6140519.315997784,
+                        "currency" : "YEN"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2e2"),
+        "first_name" : "DANIEL",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 8382349.386766551,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 6605864.850059703,
+                        "currency" : "YUAN"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 3849188.922156063,
+                        "currency" : "YEN"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 4040933.2733676303,
+                        "currency" : "YUAN"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 6169503.517499695,
+                        "currency" : "YUAN"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 7641660.104955465,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 6103871.976585753,
+                        "currency" : "YEN"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 5707269.0824853135,
+                        "currency" : "YEN"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2e3"),
+        "first_name" : "PAUL",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 936484.1221326711,
+                        "currency" : "YUAN"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2e4"),
+        "first_name" : "MARK",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 521640.39247602574,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 9896058.025694223,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 6326316.032295041,
+                        "currency" : "POUNDS STERLING"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 752161.7102783576,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 496816.2525023853,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 7791969.069134079,
+                        "currency" : "EURO"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 8401384.260885552,
+                        "currency" : "POUNDS STERLING"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2e5"),
+        "first_name" : "DONALD",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Savings",
+                        "account_balance" : 9075817.291616874,
+                        "currency" : "YUAN"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 3447555.7155175945,
+                        "currency" : "POUNDS STERLING"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2e6"),
+        "first_name" : "GEORGE",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 7510049.716676093,
+                        "currency" : "PESO"
+                },
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 8978088.436168617,
+                        "currency" : "USD"
+                },
+                {
+                        "account_type" : "401K",
+                        "account_balance" : 3536582.866462197,
+                        "currency" : "YEN"
+                },
+                {
+                        "account_type" : "Checking",
+                        "account_balance" : 4390095.46173461,
+                        "currency" : "USD"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("595cdcc35d90d9722326e2e7"),
+        "first_name" : "KENNETH",
+        "last_name" : "SMITH",
+        "accounts" : [
+                {
+                        "account_type" : "Investment",
+                        "account_balance" : 8984765.638846941,
+                        "currency" : "YEN"
+                }
+        ]
